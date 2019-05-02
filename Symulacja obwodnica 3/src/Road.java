@@ -71,12 +71,12 @@ public class Road {
             //checkCollision(v);
             if(v.getPositionX() + v.getVelocity() < this.length){
                 v.move();
+                roadArray[v.getPositionY()][v.getPositionX()] = v;
             }
             else{
                 toRemove.add(v);
                 roadArray[v.getPositionY()][v.getPositionX()] = null;
             }
-            roadArray[v.getPositionY()][v.getPositionX()] = v;
             roadArray[v.getPositionY()][v.getPositionX() - v.getVelocity()] = null;
         }
         vehicles.removeAll(toRemove);
