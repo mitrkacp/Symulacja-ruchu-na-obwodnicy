@@ -1,5 +1,5 @@
 public class Application {
     public static void main(String argv[]){
-        Road road = new Road(2,3,4,2);
+        Road road = new Road(30,2,3,1);
     }
 }

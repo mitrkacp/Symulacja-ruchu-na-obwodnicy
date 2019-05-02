@@ -65,16 +65,18 @@ public class Vehicle {
     }
 
     public void accelerate(){
-        if(velocity+1 >= maxVelocity){
+        if(this.velocity+1 >= maxVelocity){
             this.velocity=maxVelocity;
         }
         else{
-            this.velocity+=1;
+            this.velocity += 1;
         }
     }
 
-    public void slowDown(){
-       //TODO
+    public void slowDown(int value){
+        if(this.velocity > 0){
+            this.velocity -= value;
+        }
     }
 
     public void move(){
