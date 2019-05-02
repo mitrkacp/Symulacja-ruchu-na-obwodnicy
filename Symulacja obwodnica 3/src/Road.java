@@ -62,9 +62,34 @@ public class Road {
             }
     }
 
+
+
     public void update(){
         for(Vehicle v: vehicles){
             //TODO
         }
     }
+
+    @Override
+    public String toString() {
+        String result = "Road not initialized";
+        if(this.roadArray != null){
+            result = "";
+            for(int i=0;i<this.roadArray.length;i++){
+                for(int j=0;j<this.roadArray[0].length;j++){
+                    if(this.roadArray[i][j] == null)result += "#";
+                    else {
+                        if(this.roadArray[i][j].getType() == Type.TRUCK)result += "T";
+                        else {
+                            if (this.roadArray[i][j].getType() == Type.CAR) result += "C";
+                            else result += "?";
+                        }
+                    }
+                }
+                result += "\n";
+            }
+        }
+        return result;
+    }
+
 }
