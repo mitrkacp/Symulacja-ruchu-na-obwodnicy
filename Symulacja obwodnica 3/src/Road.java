@@ -44,8 +44,8 @@ public class Road {
         this.velocityLimit = velocityLimit;
     }
 
-    public void addVehicle(int id, Type type, int positionX, int positionY, int velocity, int roadId){
-        Vehicle vehicle = new Vehicle(id,type,positionX,positionY,velocity,roadId);
+    public void addVehicle(Vehicle vehicle){
+        this.roadArray[vehicle.getPositionX()][vehicle.getPositionY()] = vehicle;
         vehicles.add(vehicle);
     }
 
