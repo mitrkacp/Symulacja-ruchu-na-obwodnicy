@@ -68,7 +68,7 @@ public class Road {
     public void update(){
         ArrayList<Vehicle> toRemove = new ArrayList<>();
         for(Vehicle v: vehicles){
-            //checkCollision(v);
+            checkCollision(v);
             if(v.getPositionX() + v.getVelocity() < this.length){
                 v.move();
                 roadArray[v.getPositionY()][v.getPositionX()] = v;
@@ -93,7 +93,7 @@ public class Road {
                     else {
                         if(this.roadArray[i][j].getType() == Type.TRUCK)result += "T";
                         else {
-                            if (this.roadArray[i][j].getType() == Type.CAR) result += "C";
+                            if (this.roadArray[i][j].getType() == Type.CAR) result += "C"+this.roadArray[i][j].getVelocity();
                             else result += "?";
                         }
                     }
