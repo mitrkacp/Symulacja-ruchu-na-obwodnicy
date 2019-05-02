@@ -46,7 +46,7 @@ public class Road {
     }
 
     public void addVehicle(Vehicle vehicle){
-        this.roadArray[vehicle.getPositionX()][vehicle.getPositionY()] = vehicle;
+        this.roadArray[vehicle.getPositionY()][vehicle.getPositionX()] = vehicle;
         vehicles.add(vehicle);
     }
 
@@ -66,9 +66,20 @@ public class Road {
 
 
     public void update(){
+        ArrayList<Vehicle> toRemove = new ArrayList<>();
         for(Vehicle v: vehicles){
-            //TODO
+            //checkCollision(v);
+            if(v.getPositionX() + v.getVelocity() < this.length){
+                v.move();
+            }
+            else{
+                toRemove.add(v);
+                roadArray[v.getPositionY()][v.getPositionX()] = null;
+            }
+            roadArray[v.getPositionY()][v.getPositionX()] = v;
+            roadArray[v.getPositionY()][v.getPositionX() - v.getVelocity()] = null;
         }
+        vehicles.removeAll(toRemove);
     }
 
     @Override
