@@ -14,6 +14,7 @@ public class Road {
         this.roadArray = new Vehicle[width][length];
         this.velocityLimit = velocityLimit;
         this.id = id;
+        this.vehicles = new ArrayList<>();
     }
 
     public int getId() {
