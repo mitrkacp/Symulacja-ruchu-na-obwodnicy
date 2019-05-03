@@ -68,6 +68,7 @@ public class Road {
     public void update(){
         ArrayList<Vehicle> toRemove = new ArrayList<>();
         for(Vehicle v: vehicles){
+            v.changeVelocity();
             checkCollision(v);
             if(v.getPositionX() + v.getVelocity() < this.length){
                 v.move();

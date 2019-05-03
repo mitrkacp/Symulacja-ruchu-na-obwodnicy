@@ -6,8 +6,8 @@ public class Vehicle {
     private int positionX;
     private int positionY;
     private int velocity;
-    private int maxVelocity;
-    private int slowProbability;
+    private int maxVelocity = 10;
+    private double slowProbability = 0.05;
     private int roadId;
 
     public int getId() {
@@ -73,10 +73,15 @@ public class Vehicle {
         }
     }
 
-    public void slowDown(int value){
-        if(this.velocity > 0){
-            this.velocity -= value;
+    public void decelerate(){
+        if(this.slowProbability > Math.random()){
+            this.velocity -= 1;
         }
+    }
+
+    public void changeVelocity(){
+        accelerate();
+        decelerate();
     }
 
     public void move(){
