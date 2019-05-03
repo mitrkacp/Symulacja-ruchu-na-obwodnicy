@@ -21,6 +21,7 @@ public class Application {
 
             System.out.println(road);
             road.update();
+
             if(i%2==0){
                 road.addVehicle(new Vehicle(i,Type.CAR,0,p,v ,1));
             }
