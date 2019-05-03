@@ -6,9 +6,8 @@ public class Vehicle {
     private int positionX;
     private int positionY;
     private int velocity;
-    private int maxVelocity = 10;
+    private int maxVelocity;
     private double slowProbability = 0.05;
-    private int roadId;
 
     public int getId() {
         return id;
@@ -42,13 +41,13 @@ public class Vehicle {
         this.velocity = velocity;
     }
 
-    public Vehicle(int id, Type type, int positionX, int positionY, int velocity, int roadId) {
-        this.roadId = roadId;
+    public Vehicle(int id, Type type, int positionX, int positionY, int velocity, int maxVelocity_) {
         this.id = id;
         this.type = type;
         this.positionX = positionX;
         this.positionY = positionY;
         this.velocity = velocity;
+        this.maxVelocity = maxVelocity_;
     }
 
     @Override

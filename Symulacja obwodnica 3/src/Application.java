@@ -4,8 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Application {
     public static void main(String argv[]){
-        Road road = new Road(100,3,3,1);
-        road.addVehicle(new Vehicle(69,Type.CAR,0,0,4,1));
+        Road road = new Road(100,3,10,1);
         Random rand = new Random();
         int v;
         int p;
@@ -23,7 +22,7 @@ public class Application {
             road.update();
 
             if(i%2==0){
-                road.addVehicle(new Vehicle(i,Type.CAR,0,p,v ,1));
+                road.addVehicle(new Vehicle(i,Type.CAR,0,p,v ,rand.nextInt(6)+4));
             }
 
         }
