@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a148d7b4-51b1-4ba7-a9ff-7698e0b03a0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Road.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,12 +34,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="111" />
+          <entry key="java" value="225" />
+          <entry key="txt" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="111" />
+          <entry key="JAVA" value="225" />
+          <entry key="PLAIN_TEXT" value="37" />
         </counts>
       </usages-collector>
     </session>
@@ -48,8 +51,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+            <state relative-caret-position="495">
+              <caret line="86" column="43" lean-forward="true" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+              <folding>
+                <element signature="e#397#398#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Road.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+            <state relative-caret-position="555">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -84,8 +93,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="473">
+              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+            <state relative-caret-position="105">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1280">
-              <caret line="190" column="132" selection-start-line="190" selection-start-column="132" selection-end-line="190" selection-end-column="132" />
+            <state relative-caret-position="-1070">
+              <caret line="204" column="132" selection-start-line="204" selection-start-column="132" selection-end-line="204" selection-end-column="132" />
             </state>
           </provider>
         </entry>
@@ -129,9 +141,9 @@
         <option value="$PROJECT_DIR$/src/Car.java" />
         <option value="$PROJECT_DIR$/src/Intersection.java" />
         <option value="$PROJECT_DIR$/src/Type.java" />
-        <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/src/Vehicle.java" />
         <option value="$PROJECT_DIR$/src/Road.java" />
+        <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/src/Simulation.java" />
       </list>
     </option>
@@ -252,7 +264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556823640446</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="przyspiesznie, randomowe zwalnianie">
+      <created>1556889645201</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556889645201</updated>
+    </task>
+    <task id="LOCAL-00004" summary="przyspiesznie, randomowe zwalnianie 2">
+      <created>1556890707967</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556890707967</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -271,8 +297,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5954621" visible="true" weight="0.43396226" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" weight="0.39869282" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5949087" visible="true" weight="0.43396226" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4980631" weight="0.39748427" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -280,7 +306,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.40453792" side_tool="true" weight="0.43396226" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.40509132" side_tool="true" weight="0.43396226" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -303,27 +329,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="road.toString()" />
     <MESSAGE value="Road.addVehicle()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Road.addVehicle()" />
+    <MESSAGE value="przyspiesznie, randomowe zwalnianie" />
+    <MESSAGE value="przyspiesznie, randomowe zwalnianie 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="przyspiesznie, randomowe zwalnianie 2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1280">
-          <caret line="190" column="132" selection-start-line="190" selection-start-column="132" selection-end-line="190" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+        <state relative-caret-position="-1070">
+          <caret line="204" column="132" selection-start-line="204" selection-start-column="132" selection-end-line="204" selection-end-column="132" />
         </state>
       </provider>
     </entry>
@@ -334,17 +348,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="86" column="43" lean-forward="true" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+          <folding>
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Road.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+        <state relative-caret-position="555">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -353,8 +387,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="473">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
