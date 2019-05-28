@@ -57,7 +57,7 @@ public class Simulation extends Thread{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            v = rand.nextInt(9)+1;//losowa v samochodu od 1 do 10
+            v = rand.nextInt(9)+1;//losowa v samochodu od 1 do 9
             p = rand.nextInt(3); // losowy pas dla samochodu
 
             System.out.println(road);

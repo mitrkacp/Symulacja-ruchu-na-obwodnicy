@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a148d7b4-51b1-4ba7-a9ff-7698e0b03a0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Road.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Road.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Simulation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Symulacja obwodnica 3/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Road.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vehicle.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,56 +20,26 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1508568225">
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="1" />
-          <entry key="xml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="225" />
-          <entry key="txt" value="37" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="225" />
-          <entry key="PLAIN_TEXT" value="37" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
+        <entry file="file://$PROJECT_DIR$/src/Type.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="86" column="43" lean-forward="true" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
-              <folding>
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#429#430#0" expanded="true" />
-                <element signature="e#551#552#0" expanded="true" />
-                <element signature="e#583#584#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Type.java">
+        <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="1156">
+              <caret line="86" column="35" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
+              <folding>
+                <element signature="e#1851#1852#0" expanded="true" />
+                <element signature="e#1893#1894#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Road.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="1224">
+              <caret line="86" column="87" selection-start-line="86" selection-start-column="87" selection-end-line="86" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -84,17 +56,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Intersection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="85">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+            <state relative-caret-position="884">
+              <caret line="66" column="82" selection-start-line="66" selection-start-column="82" selection-end-line="66" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,23 +74,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="85">
+              <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1070">
-              <caret line="204" column="132" selection-start-line="204" selection-start-column="132" selection-end-line="204" selection-end-column="132" />
             </state>
           </provider>
         </entry>
@@ -141,10 +104,10 @@
         <option value="$PROJECT_DIR$/src/Car.java" />
         <option value="$PROJECT_DIR$/src/Intersection.java" />
         <option value="$PROJECT_DIR$/src/Type.java" />
-        <option value="$PROJECT_DIR$/src/Vehicle.java" />
-        <option value="$PROJECT_DIR$/src/Road.java" />
         <option value="$PROJECT_DIR$/src/Application.java" />
+        <option value="$PROJECT_DIR$/src/Vehicle.java" />
         <option value="$PROJECT_DIR$/src/Simulation.java" />
+        <option value="$PROJECT_DIR$/src/Road.java" />
       </list>
     </option>
   </component>
@@ -170,24 +133,6 @@
             <path>
               <item name="Symulacja obwodnica 3" type="b2602c69:ProjectViewProjectNode" />
               <item name="Symulacja obwodnica 3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Symulacja obwodnica 3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Symulacja obwodnica 3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Symulacja obwodnica 3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Symulacja obwodnica 3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Symulacja obwodnica 3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Symulacja obwodnica 3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Symulacja obwodnica 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -202,7 +147,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556824267794" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556913477335" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -249,6 +194,16 @@
       <workItem from="1556831363608" duration="2308000" />
       <workItem from="1556875290744" duration="1624000" />
       <workItem from="1556877182700" duration="643000" />
+      <workItem from="1556905153703" duration="3555000" />
+      <workItem from="1557608555313" duration="1905000" />
+      <workItem from="1557751785596" duration="256000" />
+      <workItem from="1557752482148" duration="274000" />
+      <workItem from="1557758787201" duration="1486000" />
+      <workItem from="1558458186195" duration="34000" />
+      <workItem from="1558964440318" duration="6168000" />
+      <workItem from="1558991133089" duration="7585000" />
+      <workItem from="1559045804064" duration="590000" />
+      <workItem from="1559082770507" duration="979000" />
     </task>
     <task id="LOCAL-00001" summary="road.toString()">
       <created>1556823238458</created>
@@ -282,13 +237,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17828000" />
+    <option name="totallyTimeSpent" value="40660000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="925" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2589928" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30181542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -297,7 +252,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5949087" visible="true" weight="0.43396226" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5930408" visible="true" weight="0.27287582" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4980631" weight="0.39748427" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -306,8 +261,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.40509132" side_tool="true" weight="0.43396226" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.40695915" side_tool="true" visible="true" weight="0.27287582" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32843137" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -323,9 +278,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="road.toString()" />
     <MESSAGE value="Road.addVehicle()" />
@@ -336,59 +288,57 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1070">
+        <state relative-caret-position="17">
           <caret line="204" column="132" selection-start-line="204" selection-start-column="132" selection-end-line="204" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Intersection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="86" column="43" lean-forward="true" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
-          <folding>
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Road.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Type.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/Intersection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Simulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="66" column="82" selection-start-line="66" selection-start-column="82" selection-end-line="66" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Simulation.java">
+    <entry file="file://$PROJECT_DIR$/src/Road.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        <state relative-caret-position="1224">
+          <caret line="86" column="87" selection-start-line="86" selection-start-column="87" selection-end-line="86" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="86" column="35" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
+          <folding>
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

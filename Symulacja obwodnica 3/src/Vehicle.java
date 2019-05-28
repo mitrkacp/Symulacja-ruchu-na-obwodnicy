@@ -84,7 +84,6 @@ public class Vehicle {
     }
 
     public void move(){
-        //TODO sprawdzanie czy koniec drogi
         this.positionX += velocity;
     }
 }
