@@ -8,6 +8,7 @@ public class Vehicle {
     private int velocity;
     private int maxVelocity;
     private double slowProbability = 0.05;
+    private int destinationId;
 
     public int getId() {
         return id;
