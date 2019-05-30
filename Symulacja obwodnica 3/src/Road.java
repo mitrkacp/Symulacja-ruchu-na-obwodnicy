@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Road {
     private Vehicle roadArray[][];
@@ -7,6 +8,7 @@ public class Road {
     private int width;
     private int velocityLimit;
     private int id;
+    private Intersection out;
 
     public Road(int length_,int width_, int velocityLimit, int id) {
         this.length = length_;
@@ -116,6 +118,8 @@ public class Road {
             else{
                 toRemove.add(v);
                 roadArray[v.getPositionY()][v.getPositionX()] = null;
+
+                if(out.getId() != v.getDestinationId()) out.addVehicleFromRoad(v);
             }
             roadArray[v.getPositionY()][v.getPositionX() - v.getVelocity()] = null;
         }
@@ -144,4 +148,30 @@ public class Road {
         return result;
     }
 
+    public void setOut(Intersection out) {
+        this.out = out;
+    }
+
+    public void putVehicle(Vehicle v) {
+        Random rand = new Random();
+        ArrayList<Integer> possibleLocation = new ArrayList<>();
+
+        for(int i=0;i<width;i++){
+            if(roadArray[i][0] == null) possibleLocation.add(i);
+        }
+        v.setPositionX(0);
+        v.setPositionY(possibleLocation.get(rand.nextInt(possibleLocation.size())));
+        this.addVehicle(v);
+
+        /*for(int i=0;i<length;i++){
+            for(int j=0;j<width;j++){
+                if(roadArray[j][i] == null){
+                    v.setPositionX(j);
+                    v.setPositionY(i);
+                    this.addVehicle(v);
+                    return;
+                }
+            }
+        }*/
+    }
 }

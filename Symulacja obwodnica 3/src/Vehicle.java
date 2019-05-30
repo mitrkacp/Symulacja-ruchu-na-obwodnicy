@@ -8,6 +8,11 @@ public class Vehicle {
     private int velocity;
     private int maxVelocity;
     private double slowProbability = 0.05;
+
+    public int getDestinationId() {
+        return destinationId;
+    }
+
     private int destinationId;
 
     public int getId() {
@@ -42,13 +47,14 @@ public class Vehicle {
         this.velocity = velocity;
     }
 
-    public Vehicle(int id, Type type, int positionX, int positionY, int velocity, int maxVelocity_) {
+    public Vehicle(int id, Type type, int positionX, int positionY, int velocity, int maxVelocity_,int id_ ){
         this.id = id;
         this.type = type;
         this.positionX = positionX;
         this.positionY = positionY;
         this.velocity = velocity;
         this.maxVelocity = maxVelocity_;
+        this.destinationId = id_;
     }
 
     @Override
