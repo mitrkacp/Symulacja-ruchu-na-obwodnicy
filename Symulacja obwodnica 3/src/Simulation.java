@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Simulation extends Thread{
     private ArrayList<Vehicle> vehicles;
-    private ArrayList<Road> roads;
+    public ArrayList<Road> roads;
     private ArrayList<Intersection> intersections;
 
     public Simulation(){

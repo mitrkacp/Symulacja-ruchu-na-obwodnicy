@@ -2,6 +2,10 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Road {
+    public Vehicle getRoadArray(int x,int y) {
+        return roadArray[x][y];
+    }
+
     private Vehicle roadArray[][];
     private ArrayList<Vehicle> vehicles;
     private int length;
