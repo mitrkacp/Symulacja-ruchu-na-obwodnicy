@@ -65,13 +65,14 @@ public class Road {
                 }
             }
             if(distance != 0 && vehicle.getVelocity() > distance - 1){
-                if(!switchLane(vehicle)){
+                if(!switchLaneLeft(vehicle)){
                     vehicle.setVelocity(distance - 1);
                 }
             }
+            switchLaneRight(vehicle);
     }
 
-    boolean switchLane(Vehicle vehicle){
+    boolean switchLaneLeft(Vehicle vehicle){
         if(vehicle.getPositionY() > 0){
             Vehicle prev = null;
             Vehicle next = null;
@@ -106,7 +107,40 @@ public class Road {
         }
     }
 
-
+    boolean switchLaneRight(Vehicle vehicle){
+        if(vehicle.getPositionY() < 2){
+            Vehicle prev = null;
+            Vehicle next = null;
+            for(int i = vehicle.getPositionX(); i > 0; i--) {
+                if (roadArray[vehicle.getPositionY() + 1][i] != null) {
+                    prev = roadArray[vehicle.getPositionY() + 1][i];
+                    break;
+                }
+            }
+            if(prev == null || prev.getVelocity() < vehicle.getPositionX() - prev.getPositionX() - 1){
+                for(int i = vehicle.getPositionX(); i < length; i++){
+                    if(roadArray[vehicle.getPositionY() + 1][i] != null){
+                        next = roadArray[vehicle.getPositionY() + 1][i];
+                        break;
+                    }
+                }
+                if(next == null || vehicle.getVelocity() < next.getPositionX() - vehicle.getPositionX() - 1){
+                    vehicle.setPositionY(vehicle.getPositionY() + 1);
+                    roadArray[vehicle.getPositionY()-1][vehicle.getPositionX()] = null;
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
 
 
     public void update(){
