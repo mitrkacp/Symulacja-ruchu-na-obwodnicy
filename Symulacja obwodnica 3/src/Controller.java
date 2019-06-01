@@ -1,30 +1,25 @@
 
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.concurrent.TimeUnit;
+
 
 
 public class Controller implements Initializable {
     Simulation sim = new Simulation();
+
 
     public void part(int id) throws IOException {
 //        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Part1NewWindow.fxml"));
@@ -54,6 +49,7 @@ public class Controller implements Initializable {
                 Runnable updater = new Runnable() {
                     @Override
                     public void run() {
+                       // while(Thread.currentThread().isInterrupted()){
                         for (int lane = 0; lane < sim.roads.get((id-1)*2).getWidth(); lane++) {
                             for(int position = 0; position < sim.roads.get((id-1)*2).getLength(); position++){
                                 if (sim.roads.get((id-1)*2).getRoadArray(lane,position) != null) {
@@ -80,13 +76,13 @@ public class Controller implements Initializable {
                             }
                         }
                     }
+                    };
 
-                };
-
-                while (flaga) {
+                while (!Thread.currentThread().isInterrupted()) {
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(1000);
                     } catch (InterruptedException ex) {
+                        throw new RuntimeException();
                     }
 
                     // UI update is run on the Application thread
@@ -100,15 +96,21 @@ public class Controller implements Initializable {
 
         });
         // don't let thread prevent JVM shutdown
-        thread.setDaemon(true);
+        //thread.setDaemon(true);
         thread.start();
+
+
+
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent t) {
+                try {
+                    thread.interrupt();
+                }
+                catch(Exception e){
 
-
-
-            }
+                }
+                }
         });
         stage.show();
 
@@ -242,6 +244,8 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
     }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

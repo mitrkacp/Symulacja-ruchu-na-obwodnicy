@@ -190,7 +190,7 @@ public class Simulation extends Thread{
         this.create();
         for(int i =0;i<10000;i++){
             try {
-                TimeUnit.SECONDS.sleep(1);
+                TimeUnit.MILLISECONDS.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -205,10 +205,10 @@ public class Simulation extends Thread{
                 intr.processVehicles();
             }
 
-            System.out.println(roads.get(0));
-            System.out.println(roads.get(1));
-            System.out.println(roads.get(2));
-            System.out.println(roads.get(3));
+           // System.out.println(roads.get(0));
+           // System.out.println(roads.get(1));
+           // System.out.println(roads.get(2));
+            // System.out.println(roads.get(3));
             System.out.println("#############################");
         }
     }
