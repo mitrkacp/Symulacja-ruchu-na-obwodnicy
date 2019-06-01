@@ -49,7 +49,6 @@ public class Controller implements Initializable {
                 Runnable updater = new Runnable() {
                     @Override
                     public void run() {
-                        System.out.println("AUUUUUUUUUUUUUUUUUUUUUUUUUUU");
                         for (int lane = 0; lane < sim.roads.get((id-1)*2).getWidth(); lane++) {
                             for(int position = 0; position < sim.roads.get((id-1)*2).getLength(); position++){
                                 if (sim.roads.get((id-1)*2).getRoadArray(lane,position) != null) {
@@ -92,7 +91,7 @@ public class Controller implements Initializable {
                     Platform.runLater(updater);
                 }
             }
-            
+
         });
         // don't let thread prevent JVM shutdown
         //thread.setDaemon(true);
