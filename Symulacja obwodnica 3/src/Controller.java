@@ -1,6 +1,7 @@
 
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -57,7 +58,7 @@ public class Controller implements Initializable {
                                 }
                                 else{
                                     Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane+4, position, root);
-                                    car.setFill(Color.LIGHTGREY);
+                                    car.setFill(Color.LIGHTGRAY);
                                 }
                             }
                         }
@@ -66,11 +67,11 @@ public class Controller implements Initializable {
                             for(int position = 0; position < sim.roads.get((id-1)*2+1).getLength(); position++){
                                 if (sim.roads.get((id-1)*2+1).getRoadArray(lane,position) != null) {
                                     Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane , sim.roads.get((id-1)*2+1).getLength()-1- position, root);
-                                    car.setFill(Color.BLUE);
+                                    car.setFill(Color.PURPLE);
                                 }
                                 else{
                                     Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane,  sim.roads.get((id-1)*2+1).getLength()-1-position, root);
-                                    car.setFill(Color.LIGHTGREY);
+                                    car.setFill(Color.LIGHTGRAY);
                                 }
                             }
                         }
@@ -129,121 +130,16 @@ public class Controller implements Initializable {
         return result;
     }
 
-    public void PrintPart1(){
-        try {
-            part(1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    public void PrintPart(ActionEvent event){
+        Node node = (Node) event.getSource();
+        int partNumber = Integer.parseInt((String) node.getUserData());
 
-    public void PrintPart2(){
         try {
-            part(2);
+            part(partNumber);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public void PrintPart3(){
-        try {
-            part(3);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart4(){
-        try {
-            part(4);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart5(){
-        try {
-            part(5);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart6(){
-        try {
-            part(6);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart7(){
-        try {
-            part(7);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart8(){
-        try {
-            part(8);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart9(){
-        try {
-            part(9);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart10(){
-        try {
-            part(10);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart11(){
-        try {
-            part(11);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart12(){
-        try {
-            part(12);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart13(){
-        try {
-            part(13);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart14(){
-        try {
-            part(14);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart15(){
-        try {
-            part(15);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public void PrintPart16(){
-        try {
-            part(16);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

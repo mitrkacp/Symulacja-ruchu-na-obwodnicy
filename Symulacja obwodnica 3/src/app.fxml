@@ -12,21 +12,21 @@
             <Image url="@Kraków_third_beltway.svg.png" />
          </image>
       </ImageView>
-      <Button fx:id="b1" layoutX="231.0" layoutY="240.0" mnemonicParsing="false" onAction="#PrintPart1" text="Part 1" />
-      <Button fx:id="b2" layoutX="367.0" layoutY="174.0" mnemonicParsing="false" onAction="#PrintPart2" text="2" />
-      <Button fx:id="b3" layoutX="500.0" layoutY="228.0" mnemonicParsing="false" onAction="#PrintPart3" text="Button" />
-      <Button fx:id="b4" layoutX="599.0" layoutY="253.0" mnemonicParsing="false" onAction="#PrintPart4" text="Button" />
-      <Button fx:id="b5" layoutX="701.0" layoutY="253.0" mnemonicParsing="false" onAction="#PrintPart5" text="Button" />
-      <Button fx:id="b6" layoutX="793.0" layoutY="278.0" mnemonicParsing="false" onAction="#PrintPart6" text="Button" />
-      <Button fx:id="b7" layoutX="812.0" layoutY="347.0" mnemonicParsing="false" onAction="#PrintPart7" text="Button" />
-      <Button fx:id="b8" layoutX="800.0" layoutY="414.0" mnemonicParsing="false" onAction="#PrintPart8" text="Button" />
-      <Button fx:id="b9" layoutX="786.0" layoutY="499.0" mnemonicParsing="false" onAction="#PrintPart9" text="Button" />
-      <Button fx:id="b10" layoutX="712.0" layoutY="567.0" mnemonicParsing="false" onAction="#PrintPart10" text="Button" />
-      <Button fx:id="b11" layoutX="712.0" layoutY="616.0" mnemonicParsing="false" onAction="#PrintPart11" text="Button" />
-      <Button fx:id="b12" layoutX="566.0" layoutY="691.0" mnemonicParsing="false" onAction="#PrintPart12" text="Button" />
-      <Button fx:id="b13" layoutX="436.0" layoutY="704.0" mnemonicParsing="false" onAction="#PrintPart13" text="Button" />
-      <Button fx:id="b14" layoutX="358.0" layoutY="641.0" mnemonicParsing="false" onAction="#PrintPart14" text="Button" />
-      <Button fx:id="b15" layoutX="263.0" layoutY="534.0" mnemonicParsing="false" onAction="#PrintPart15" text="Button" />
-      <Button fx:id="b16" layoutX="252.0" layoutY="379.0" mnemonicParsing="false" onAction="#PrintPart16" text="Button" />
+      <Button fx:id="b1" layoutX="231.0" layoutY="240.0" mnemonicParsing="false" onAction="#PrintPart" userData="1" text="Part 1" />
+      <Button fx:id="b2" layoutX="367.0" layoutY="174.0" mnemonicParsing="false" onAction="#PrintPart"   userData="2" text="2" />
+      <Button fx:id="b3" layoutX="500.0" layoutY="228.0" mnemonicParsing="false" onAction="#PrintPart"  userData="3" text="Button" />
+      <Button fx:id="b4" layoutX="599.0" layoutY="253.0" mnemonicParsing="false" onAction="#PrintPart"  userData="4" text="Button" />
+      <Button fx:id="b5" layoutX="701.0" layoutY="253.0" mnemonicParsing="false" onAction="#PrintPart"  userData="5" text="Button" />
+      <Button fx:id="b6" layoutX="793.0" layoutY="278.0" mnemonicParsing="false" onAction="#PrintPart"  userData="6" text="Button" />
+      <Button fx:id="b7" layoutX="812.0" layoutY="347.0" mnemonicParsing="false" onAction="#PrintPart"  userData="7" text="Button" />
+      <Button fx:id="b8" layoutX="800.0" layoutY="414.0" mnemonicParsing="false" onAction="#PrintPart"  userData="8" text="Button" />
+      <Button fx:id="b9" layoutX="786.0" layoutY="499.0" mnemonicParsing="false" onAction="#PrintPart"  userData="9" text="Button" />
+      <Button fx:id="b10" layoutX="712.0" layoutY="567.0" mnemonicParsing="false" onAction="#PrintPart"  userData="10" text="Button" />
+      <Button fx:id="b11" layoutX="712.0" layoutY="616.0" mnemonicParsing="false" onAction="#PrintPart"  userData="11" text="Button" />
+      <Button fx:id="b12" layoutX="566.0" layoutY="691.0" mnemonicParsing="false" onAction="#PrintPart" userData="12" text="Button" />
+      <Button fx:id="b13" layoutX="436.0" layoutY="704.0" mnemonicParsing="false" onAction="#PrintPart"  userData="13" text="Button" />
+      <Button fx:id="b14" layoutX="358.0" layoutY="641.0" mnemonicParsing="false" onAction="#PrintPart" userData="14" text="Button" />
+      <Button fx:id="b15" layoutX="263.0" layoutY="534.0" mnemonicParsing="false" onAction="#PrintPart"  userData="15" text="Button" />
+      <Button fx:id="b16" layoutX="252.0" layoutY="379.0" mnemonicParsing="false" onAction="#PrintPart" userData="16" text="Button" />
    </children>
 </AnchorPane>
