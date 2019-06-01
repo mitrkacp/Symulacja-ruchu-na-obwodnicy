@@ -49,7 +49,7 @@ public class Controller implements Initializable {
                 Runnable updater = new Runnable() {
                     @Override
                     public void run() {
-                       // while(Thread.currentThread().isInterrupted()){
+                        System.out.println("AUUUUUUUUUUUUUUUUUUUUUUUUUUU");
                         for (int lane = 0; lane < sim.roads.get((id-1)*2).getWidth(); lane++) {
                             for(int position = 0; position < sim.roads.get((id-1)*2).getLength(); position++){
                                 if (sim.roads.get((id-1)*2).getRoadArray(lane,position) != null) {
@@ -82,7 +82,10 @@ public class Controller implements Initializable {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException ex) {
-                        throw new RuntimeException();
+                           return ;
+                    }
+                    finally {
+
                     }
 
                     // UI update is run on the Application thread
