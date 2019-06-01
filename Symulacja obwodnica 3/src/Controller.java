@@ -92,11 +92,7 @@ public class Controller implements Initializable {
                     Platform.runLater(updater);
                 }
             }
-
-            public void close(){
-                this.flaga = false;
-            }
-
+            
         });
         // don't let thread prevent JVM shutdown
         //thread.setDaemon(true);
