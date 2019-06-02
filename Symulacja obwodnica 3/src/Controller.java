@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -27,9 +28,11 @@ public class Controller implements Initializable {
         ScrollPane scrollPane = new ScrollPane();
         GridPane root = new GridPane();
         Stage stage = new Stage();
-        stage.setTitle("Part 1");
+        if(id==1)stage.setTitle(sim.getIntersections().get(15).getDesc() + " - " + sim.getIntersections().get(id-1).getDesc() );
+        else stage.setTitle(sim.getIntersections().get(id - 2).getDesc() + " - " + sim.getIntersections().get(id-1).getDesc() );
         scrollPane.setContent(root);
         root.setVgap(5);
+        //stage.getIcons().add(new Image("file:icon.png"));
         stage.setScene(new Scene(scrollPane, 1000, 200));
 
         for (int i = 0; i < sim.roads.get((id-1)*2).getLength(); ++i) {
@@ -44,7 +47,6 @@ public class Controller implements Initializable {
         }
 
         Thread thread = new Thread(new Runnable() {
-            private boolean flaga = true;
             @Override
             public void run() {
                 Runnable updater = new Runnable() {

@@ -16,6 +16,11 @@ public class Intersection {
     }
 
     private double carsInput;
+
+    public String getDesc() {
+        return desc;
+    }
+
     private String desc;
     private ArrayList<Vehicle> newVehicles;
     private ArrayList<Vehicle> vehiclesToBeProcessed;

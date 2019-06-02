@@ -15,6 +15,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("app.fxml"));
         primaryStage.setTitle("III obwodnica Krakowa");
+        //stage.getIcons().add(new Image("file:icon.png"));
         primaryStage.setScene(new Scene(root, 1100  , 875));
 
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
