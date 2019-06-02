@@ -210,7 +210,8 @@ public class Simulation extends Thread{
             // System.out.println(roads.get(0));
             // System.out.println(roads.get(1));
             // System.out.println(roads.get(2));
-             System.out.println(roads.get(5));
+
+            System.out.println(roads.get(5));
             // System.out.println("#############################");
         }
     }
