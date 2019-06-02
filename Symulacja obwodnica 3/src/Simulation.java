@@ -100,22 +100,22 @@ public class Simulation extends Thread{
         roads.add(r16_2);
 
 
-        intersections.add(new Intersection(1,r1_1,r2_2,r1_2,r2_1,1.2,"Ofiar Katynia"));
-        intersections.add(new Intersection(2,r2_1,r3_2,r2_2,r3_1,1.2,"Wolomborski"));
-        intersections.add(new Intersection(3,r3_1,r4_2,r3_2,r4_1,1.2,"Imbramowski"));
-        intersections.add(new Intersection(4,r4_1,r5_2,r4_2,r5_1,1.2,"Polsadu"));
-        intersections.add(new Intersection(5,r5_1,r6_2,r5_2,r6_1,1.2,"Mistrzejowice"));
-        intersections.add(new Intersection(6,r6_1,r7_2,r6_2,r7_1,1.2,"Czyżyny"));
-        intersections.add(new Intersection(7,r7_1,r8_2,r7_2,r8_1,1.2,"Dywizjonu 308"));
-        intersections.add(new Intersection(8,r8_1,r9_2,r8_2,r9_1,1.2,"Łęg"));
-        intersections.add(new Intersection(9,r9_1,r10_2,r9_2,r10_1,1.2,"Płaszów"));
-        intersections.add(new Intersection(10,r10_1,r11_2,r10_2,r11_1,1.2,"Bagry"));
-        intersections.add(new Intersection(11,r11_1,r12_2,r11_2,r12_1,1.2,"Kabel"));
-        intersections.add(new Intersection(12,r12_1,r13_2,r12_2,r13_1,1.2,"Łagiewniki"));
-        intersections.add(new Intersection(13,r13_1,r14_2,r13_2,r14_1,1.2,"Solvay"));
-        intersections.add(new Intersection(14,r14_1,r15_2,r14_2,r15_1,1.2,"Ruczaj"));
-        intersections.add(new Intersection(15,r15_1,r16_2,r15_2,r16_1,1.2,"Przegorzały"));
-        intersections.add(new Intersection(16,r16_1,r1_2,r16_2,r1_1,1.2,"Zarzecze"));
+        intersections.add(new Intersection(1,r1_1,r2_2,r1_2,r2_1,1.2,"Ofiar Katynia",0,0));
+        intersections.add(new Intersection(2,r2_1,r3_2,r2_2,r3_1,1.2,"Wolomborski",1,10));
+        intersections.add(new Intersection(3,r3_1,r4_2,r3_2,r4_1,1.2,"Imbramowski",0,0));
+        intersections.add(new Intersection(4,r4_1,r5_2,r4_2,r5_1,1.2,"Polsadu",0,0));
+        intersections.add(new Intersection(5,r5_1,r6_2,r5_2,r6_1,1.2,"Mistrzejowice",0,0));
+        intersections.add(new Intersection(6,r6_1,r7_2,r6_2,r7_1,1.2,"Czyżyny",0,0));
+        intersections.add(new Intersection(7,r7_1,r8_2,r7_2,r8_1,1.2,"Dywizjonu 308",0,0));
+        intersections.add(new Intersection(8,r8_1,r9_2,r8_2,r9_1,1.2,"Łęg",0,0));
+        intersections.add(new Intersection(9,r9_1,r10_2,r9_2,r10_1,1.2,"Płaszów",0,0));
+        intersections.add(new Intersection(10,r10_1,r11_2,r10_2,r11_1,1.2,"Bagry",0,0));
+        intersections.add(new Intersection(11,r11_1,r12_2,r11_2,r12_1,1.2,"Kabel",0,0));
+        intersections.add(new Intersection(12,r12_1,r13_2,r12_2,r13_1,1.2,"Łagiewniki",0,0));
+        intersections.add(new Intersection(13,r13_1,r14_2,r13_2,r14_1,1.2,"Solvay",0,0));
+        intersections.add(new Intersection(14,r14_1,r15_2,r14_2,r15_1,1.2,"Ruczaj",0,0));
+        intersections.add(new Intersection(15,r15_1,r16_2,r15_2,r16_1,1.2,"Przegorzały",0,0));
+        intersections.add(new Intersection(16,r16_1,r1_2,r16_2,r1_1,1.2,"Zarzecze",0,0));
 
         r1_1.setOut(intersections.get(0));
         r2_2.setOut(intersections.get(0));
@@ -201,15 +201,17 @@ public class Simulation extends Thread{
 
             this.generateNewCars();
 
+            System.out.println(intersections.get(1));
+
             for(Intersection intr: intersections){
-                intr.processVehicles();
+                intr.update();
             }
 
-           // System.out.println(roads.get(0));
-           // System.out.println(roads.get(1));
-           // System.out.println(roads.get(2));
-            // System.out.println(roads.get(3));
-            System.out.println("#############################");
+            // System.out.println(roads.get(0));
+            // System.out.println(roads.get(1));
+            // System.out.println(roads.get(2));
+             System.out.println(roads.get(5));
+            // System.out.println("#############################");
         }
     }
 }

@@ -69,7 +69,18 @@ public class Road {
                     vehicle.setVelocity(distance - 1);
                 }
             }
-            switchLaneRight(vehicle);
+            if(vehicle.getVelocity() > 0){
+                switchLaneRight(vehicle);
+            }
+
+    }
+
+    public void stopBeforeIntersection(Vehicle v){
+        int dist = length - v.getPositionX() - 1;
+        if(v.getVelocity() > dist - 1){
+            if(dist > 0)v.setVelocity(dist);
+            else v.setVelocity(0);
+        }
     }
 
     boolean switchLaneLeft(Vehicle vehicle){
@@ -148,7 +159,11 @@ public class Road {
         for(Vehicle v: vehicles){
             v.changeVelocity();
             if(v.getVelocity() > this.velocityLimit) v.setVelocity(velocityLimit);
+            if(out.lights == 1){
+                this.stopBeforeIntersection(v);
+            }
             checkCollision(v);
+
             if(v.getPositionX() + v.getVelocity() < this.length){
                 v.move();
                 roadArray[v.getPositionY()][v.getPositionX()] = v;
@@ -156,10 +171,12 @@ public class Road {
             else{
                 toRemove.add(v);
                 roadArray[v.getPositionY()][v.getPositionX()] = null;
-
-                if(out.getId() != v.getDestinationId()) out.addVehicleFromRoad(v);
+                if (out.getId() != v.getDestinationId()) out.addVehicleFromRoad(v);
             }
-            roadArray[v.getPositionY()][v.getPositionX() - v.getVelocity()] = null;
+            if(v.getVelocity() > 0){
+                roadArray[v.getPositionY()][v.getPositionX() - v.getVelocity()] = null;
+            }
+
         }
         vehicles.removeAll(toRemove);
     }
@@ -175,7 +192,7 @@ public class Road {
                     else {
                         if(this.roadArray[i][j].getType() == Type.TRUCK)result += "T";
                         else {
-                            if (this.roadArray[i][j].getType() == Type.CAR) result += "C"+this.roadArray[i][j].getVelocity();
+                            if (this.roadArray[i][j].getType() == Type.CAR) result += this.roadArray[i][j].getVelocity();
                             else result += "?";
                         }
                     }

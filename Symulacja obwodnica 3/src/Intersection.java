@@ -5,6 +5,9 @@ public class Intersection {
         return id;
     }
 
+    public int lights; //0 - rondo, 1 - czerwone, 2 - zielone
+    private int lightsCounterInit;
+    private int lightsCounter;
     private int id;
     private Road roadCC_in;
     private Road roadCC_out;
@@ -16,6 +19,11 @@ public class Intersection {
     }
 
     private double carsInput;
+
+    public String getDesc() {
+        return desc;
+    }
+
     private String desc;
     private ArrayList<Vehicle> newVehicles;
     private ArrayList<Vehicle> vehiclesToBeProcessed;
@@ -23,7 +31,7 @@ public class Intersection {
 
     public double currentGeneratorCount = 0;
 
-    public Intersection(int i,Road inC,Road inCC,Road outC,Road outCC, double ci,String d){
+    public Intersection(int i,Road inC,Road inCC,Road outC,Road outCC, double ci,String d,int l, int lc){
         id = i;
         roadC_in = inC;
         roadCC_in = inCC;
@@ -33,6 +41,9 @@ public class Intersection {
         desc = d;
         newVehicles = new ArrayList<>();
         vehiclesToBeProcessed = new ArrayList<>();
+        lights = l;
+        lightsCounterInit = lc;
+        lightsCounter = lightsCounterInit;
     }
 
 
@@ -44,21 +55,22 @@ public class Intersection {
         vehiclesToBeProcessed.add(v);
     }
 
-    public void processVehicles(){
+    public void update(){
         int vNum;
         if(maxVehiclesProcessed < vehiclesToBeProcessed.size()) vNum = maxVehiclesProcessed;
         else {
-            int freeSpace = maxVehiclesProcessed - vehiclesToBeProcessed.size();
-            if(freeSpace > newVehicles.size()){
-                for(int i=newVehicles.size();i>0;i--){
-                    vehiclesToBeProcessed.add(newVehicles.get(0));
-                    newVehicles.remove(0);
-                }
-            }
-            else {
-                for (int i = freeSpace; i > 0; i--) {
-                    vehiclesToBeProcessed.add(newVehicles.get(0));
-                    newVehicles.remove(0);
+            if(lights != 2) {
+                int freeSpace = maxVehiclesProcessed - vehiclesToBeProcessed.size();
+                if (freeSpace > newVehicles.size()) {
+                    for (int i = newVehicles.size(); i > 0; i--) {
+                        vehiclesToBeProcessed.add(newVehicles.get(0));
+                        newVehicles.remove(0);
+                    }
+                } else {
+                    for (int i = freeSpace; i > 0; i--) {
+                        vehiclesToBeProcessed.add(newVehicles.get(0));
+                        newVehicles.remove(0);
+                    }
                 }
             }
             vNum = vehiclesToBeProcessed.size();
@@ -99,6 +111,24 @@ public class Intersection {
             }
         }
 
+        lightsCounter--;
+        if(lightsCounter == 0){
+            this.changeLights();
+            lightsCounter = lightsCounterInit;
+        }
+
     }
 
+    public void changeLights(){
+        if(lights == 1){
+            lights = 2;
+            return;
+        }
+        if(lights == 2)lights = 1;
+    }
+
+    @Override
+    public String toString() {
+        return desc + " id: " + id + " Lights: " + lights + " LC: " + lightsCounter + " VTPSize: " + vehiclesToBeProcessed.size() + " NVsize: " + newVehicles.size();
+    }
 }
