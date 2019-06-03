@@ -68,11 +68,13 @@ public class Controller implements Initializable {
                         for (int lane = 0; lane < sim.roads.get((id-1)*2+1).getWidth(); lane++) {
                             for(int position = 0; position < sim.roads.get((id-1)*2+1).getLength(); position++){
                                 if (sim.roads.get((id-1)*2+1).getRoadArray(lane,position) != null) {
-                                    Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane , sim.roads.get((id-1)*2+1).getLength()-1- position, root);
+                                    Rectangle car =
+                                            (Rectangle) getNodeByRowColumnIndex(sim.roads.get((id-1)*2+1).getWidth() - lane - 1 , sim.roads.get((id-1)*2+1).getLength()-1- position, root);
                                     car.setFill(Color.PURPLE);
                                 }
                                 else{
-                                    Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane,  sim.roads.get((id-1)*2+1).getLength()-1-position, root);
+                                    Rectangle car =
+                                            (Rectangle) getNodeByRowColumnIndex(sim.roads.get((id-1)*2+1).getWidth() - lane - 1,  sim.roads.get((id-1)*2+1).getLength()-1-position, root);
                                     car.setFill(Color.LIGHTGRAY);
                                 }
                             }
