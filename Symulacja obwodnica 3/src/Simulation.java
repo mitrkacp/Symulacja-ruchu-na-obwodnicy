@@ -190,7 +190,7 @@ public class Simulation extends Thread{
         this.create();
         for(int i =0;i<10000;i++){
             try {
-                TimeUnit.MILLISECONDS.sleep(1000);
+                TimeUnit.MILLISECONDS.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

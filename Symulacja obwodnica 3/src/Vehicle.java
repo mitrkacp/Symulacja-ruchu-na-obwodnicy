@@ -1,3 +1,5 @@
+import javafx.scene.paint.Color;
+import java.util.Random;
 import java.util.Objects;
 
 public class Vehicle {
@@ -7,6 +9,7 @@ public class Vehicle {
     private int positionY;
     private int velocity;
     private int maxVelocity;
+    private Color color;
     private double slowProbability = 0.05;
 
     public int getDestinationId() {
@@ -47,7 +50,15 @@ public class Vehicle {
         this.velocity = velocity;
     }
 
-    public Vehicle(int id, Type type, int positionX, int positionY, int velocity, int maxVelocity_,int id_ ){
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Vehicle(int id, Type type, int positionX, int positionY, int velocity, int maxVelocity_, int id_ ){
         this.id = id;
         this.type = type;
         this.positionX = positionX;
@@ -55,6 +66,8 @@ public class Vehicle {
         this.velocity = velocity;
         this.maxVelocity = maxVelocity_;
         this.destinationId = id_;
+        Random rand = new Random();
+        this.color = Color.color(rand.nextDouble(), rand.nextDouble(), rand.nextDouble());
     }
 
     @Override

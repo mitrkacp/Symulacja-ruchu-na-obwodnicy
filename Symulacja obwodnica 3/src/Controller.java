@@ -56,7 +56,7 @@ public class Controller implements Initializable {
                             for(int position = 0; position < sim.roads.get((id-1)*2).getLength(); position++){
                                 if (sim.roads.get((id-1)*2).getRoadArray(lane,position) != null) {
                                     Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane+4, position, root);
-                                    car.setFill(Color.BLUE);
+                                    car.setFill( sim.roads.get((id-1)*2).getRoadArray(lane,position).getColor());
                                 }
                                 else{
                                     Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane+4, position, root);
@@ -69,8 +69,9 @@ public class Controller implements Initializable {
                             for(int position = 0; position < sim.roads.get((id-1)*2+1).getLength(); position++){
                                 if (sim.roads.get((id-1)*2+1).getRoadArray(lane,position) != null) {
                                     Rectangle car =
-                                            (Rectangle) getNodeByRowColumnIndex(sim.roads.get((id-1)*2+1).getWidth() - lane - 1 , sim.roads.get((id-1)*2+1).getLength()-1- position, root);
-                                    car.setFill(Color.PURPLE);
+                                            (Rectangle) getNodeByRowColumnIndex(sim.roads.get((id-1)*2+1).getWidth() - lane - 1,
+                                                    sim.roads.get((id-1)*2+1).getLength()-1- position, root);
+                                    car.setFill( sim.roads.get((id-1)*2+1).getRoadArray(lane,position).getColor());
                                 }
                                 else{
                                     Rectangle car =
@@ -84,7 +85,7 @@ public class Controller implements Initializable {
 
                 while (!Thread.currentThread().isInterrupted()) {
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(500);
                     } catch (InterruptedException ex) {
                            return ;
                     }
