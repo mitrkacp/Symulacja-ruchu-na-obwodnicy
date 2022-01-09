@@ -158,6 +158,12 @@ public class Simulation extends Thread{
             while(intr.currentGeneratorCount >= 1){
                 intr.currentGeneratorCount -= 1;
                 Vehicle v = new Vehicle(vehicles.size()+1,Type.CAR,0,0,rand.nextInt(8)+2,rand.nextInt(4)+6,rand.nextInt(16)+1);
+
+                if((int) ((Math.random() * (10)))<2){
+                    v = new Vehicle(vehicles.size()+1,Type.TRUCK,0,0,rand.nextInt(8)+2,rand.nextInt(4)+6,rand.nextInt(16)+1);
+
+                }
+
                 vehicles.add(v);
                 intr.addNewVehicle(v);
             }

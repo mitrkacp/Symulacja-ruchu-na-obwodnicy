@@ -59,8 +59,21 @@ public class Controller implements Initializable {
                                     car.setFill( sim.roads.get((id-1)*2).getRoadArray(lane,position).getColor());
                                 }
                                 else{
-                                    Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane+4, position, root);
-                                    car.setFill(Color.LIGHTGRAY);
+                                    if(position > 0){
+                                        if( sim.roads.get((id-1)*2).getRoadArray(lane,position - 1) != null && sim.roads.get((id-1)*2).getRoadArray(lane,position - 1).getType() == Type.TRUCK ){
+                                            Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane+4, position, root);
+                                            car.setFill( sim.roads.get((id-1)*2).getRoadArray(lane,position - 1).getColor());
+                                        }
+                                        else{
+                                            Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane+4, position, root);
+                                            car.setFill(Color.LIGHTGRAY);
+                                        }
+                                    }else {
+                                        Rectangle car = (Rectangle) getNodeByRowColumnIndex(lane+4, position, root);
+                                        car.setFill(Color.LIGHTGRAY);
+                                    }
+
+
                                 }
                             }
                         }
@@ -74,9 +87,24 @@ public class Controller implements Initializable {
                                     car.setFill( sim.roads.get((id-1)*2+1).getRoadArray(lane,position).getColor());
                                 }
                                 else{
-                                    Rectangle car =
-                                            (Rectangle) getNodeByRowColumnIndex(sim.roads.get((id-1)*2+1).getWidth() - lane - 1,  sim.roads.get((id-1)*2+1).getLength()-1-position, root);
-                                    car.setFill(Color.LIGHTGRAY);
+                                    if(position > 0){
+                                        if(sim.roads.get((id-1)*2+1).getRoadArray(lane,position - 1) != null && sim.roads.get((id-1)*2+1).getRoadArray(lane,position - 1).getType() == Type.TRUCK){
+                                            Rectangle car =
+                                                    (Rectangle) getNodeByRowColumnIndex(sim.roads.get((id-1)*2+1).getWidth() - lane - 1,
+                                                            sim.roads.get((id-1)*2+1).getLength()-1- position, root);
+                                            car.setFill( sim.roads.get((id-1)*2+1).getRoadArray(lane,position - 1).getColor());
+                                        }else{
+                                            Rectangle car =
+                                                    (Rectangle) getNodeByRowColumnIndex(sim.roads.get((id-1)*2+1).getWidth() - lane - 1,  sim.roads.get((id-1)*2+1).getLength()-1-position, root);
+                                            car.setFill(Color.LIGHTGRAY);
+                                        }
+                                    }
+                                    else {
+                                        Rectangle car =
+                                                (Rectangle) getNodeByRowColumnIndex(sim.roads.get((id-1)*2+1).getWidth() - lane - 1,  sim.roads.get((id-1)*2+1).getLength()-1-position, root);
+                                        car.setFill(Color.LIGHTGRAY);
+                                    }
+
                                 }
                             }
                         }

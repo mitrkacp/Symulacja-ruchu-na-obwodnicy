@@ -58,15 +58,19 @@ public class Road {
 
     public void checkCollision(Vehicle vehicle){
             int distance = 0;
-            for(int i = vehicle.getPositionX()+1; i < length; i++){
+            int car_length = 1;
+            if(vehicle.getType() == Type.TRUCK){
+                car_length = 2;
+            }
+            for(int i = vehicle.getPositionX()+car_length; i < length; i++){
                 if(roadArray[vehicle.getPositionY()][i] != null) {
-                    distance = i - vehicle.getPositionX() - 1;
+                    distance = i - vehicle.getPositionX() - car_length;
                     break;
                 }
             }
-            if(distance != 0 && vehicle.getVelocity() > distance - 1){
+            if(distance != 0 && vehicle.getVelocity() > distance - car_length){
                 if(!switchLaneLeft(vehicle)){
-                    vehicle.setVelocity(distance - 1);
+                    vehicle.setVelocity(distance - car_length);
                 }
             }
             if(vehicle.getVelocity() > 0){
@@ -76,8 +80,13 @@ public class Road {
     }
 
     public void stopBeforeIntersection(Vehicle v){
-        int dist = length - v.getPositionX() - 1;
-        if(v.getVelocity() > dist - 1){
+        int car_length = 1;
+        if(v.getType() == Type.TRUCK){
+            car_length = 2;
+        }
+
+        int dist = length - v.getPositionX() - car_length;
+        if(v.getVelocity() > dist - car_length){
             if(dist > 0)v.setVelocity(dist);
             else v.setVelocity(0);
         }
