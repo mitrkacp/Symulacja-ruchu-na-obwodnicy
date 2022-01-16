@@ -160,7 +160,7 @@ public class Simulation extends Thread{
                 Vehicle v = new Vehicle(vehicles.size()+1,Type.CAR,0,0,rand.nextInt(8)+2,rand.nextInt(4)+6,rand.nextInt(16)+1);
 
                 if((int) ((Math.random() * (10)))<2){
-                    v = new Vehicle(vehicles.size()+1,Type.TRUCK,0,0,rand.nextInt(8)+2,rand.nextInt(4)+6,rand.nextInt(16)+1);
+                    v = new Vehicle(vehicles.size()+1,Type.TRUCK,0,0,rand.nextInt(8)+1,rand.nextInt(4)+3,rand.nextInt(16)+1);
 
                 }
 
